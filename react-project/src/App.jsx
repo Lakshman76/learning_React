@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import Card from './components/Card';
 import MyComponent from './components/myComponent';
+
 function App() {
+
 let [details, setDetails] = useState("submit test");
 const handleClick = () =>{
   details = setDetails('Test submitted');
+  
 }
   return (
     <>
