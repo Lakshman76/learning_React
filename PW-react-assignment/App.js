@@ -1,3 +1,12 @@
 import Person from "./components/Person";
+import Button from "./components/Button";
 
-<Person name="Lakshman" age="19" />
+App = () =>{
+    return(
+        <>
+            <Person name="Lakshman" age="19" />
+            <Button text="click me" onClick={()=>console.log('clicked')} />
+        </>
+    )
+}
+export default App;
