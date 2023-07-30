@@ -8,7 +8,7 @@ const handleClick = () =>{
 }
   return (
     <>
-      <h1>Test1</h1>
+      <h1 style={{backgroundColor:"red", color:"yellowgreen"}}>Test1</h1>
       <h2>{details}</h2>
       <button onClick={handleClick}>click me</button>
       <MyComponent />
