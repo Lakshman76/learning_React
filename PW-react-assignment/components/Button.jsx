@@ -1,3 +1,4 @@
+// this component used inside App.js
 
 function Button(props) {
   return (
