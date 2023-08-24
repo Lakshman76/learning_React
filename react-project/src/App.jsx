@@ -36,7 +36,7 @@ import AVATAR from "./components/Avatar";
 //     console.log(`dec clicked ${count}`);
 //   }
 
-//   // useState hook
+// useState hook
 
 //   let [counter, setCounter] = useState(0);
 
@@ -62,38 +62,65 @@ import AVATAR from "./components/Avatar";
 //   )
 // }
 
-const App = () => {
-  const [todos, setTodos] = useState(["todo 1", "todo 2"]);
+// const App = () => {
+//   const [todos, setTodos] = useState(["todo 1", "todo 2"]);
 
-  return (
+//   return (
+//     <>
+//       <h1>Todo List</h1>
+//       {todos.map((value, index) => (
+//         <li key={index}>{value}</li>
+//       ))}
+
+//       <button
+//         onClick={() => {
+//           setTodos([...todos, "todo 3"]);
+//         }}
+//       >
+//         ADD
+//       </button>
+//       <h1>AVATAR</h1>
+//       <AVATAR 
+//         src="https://images.pexels.com/photos/17706105/pexels-photo-17706105/free-photo-of-city-road-people-woman.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+//         width="200px"
+//       />
+//       <AVATAR 
+//         src="https://images.pexels.com/photos/15133974/pexels-photo-15133974.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+//         width="200px"
+//       />
+//       <AVATAR 
+//         src="https://images.pexels.com/photos/17902464/pexels-photo-17902464/free-photo-of-man-people-woman-relaxation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+//         width="200px"
+//       />
+//     </>
+//   );
+// };
+
+
+const App = () =>{
+
+  const [count, setCount] = useState(0);
+  return(
     <>
-      <h1>Todo List</h1>
-      {todos.map((value, index) => (
-        <li key={index}>{value}</li>
-      ))}
+      <h1>Count is : {count}</h1>
+      <button onClick={()=>{
+        // setCount(count+1);
+        // alert('clicked'+count);
+        // setCount(count+1);
+        // alert('clicked'+count);
+        // setCount(count+1);
+        // alert('clicked'+count);
 
-      <button
-        onClick={() => {
-          setTodos([...todos, "todo 3"]);
-        }}
-      >
-        ADD
-      </button>
-      <h1>AVATAR</h1>
-      <AVATAR 
-        src="https://images.pexels.com/photos/17706105/pexels-photo-17706105/free-photo-of-city-road-people-woman.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-        width="200px"
-      />
-      <AVATAR 
-        src="https://images.pexels.com/photos/15133974/pexels-photo-15133974.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-        width="200px"
-      />
-      <AVATAR 
-        src="https://images.pexels.com/photos/17902464/pexels-photo-17902464/free-photo-of-man-people-woman-relaxation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-        width="200px"
-      />
+        setCount((x) => x+1);
+        alert('clicked '+count);
+        setCount((x) => x+1);
+        alert('clicked '+count);
+        setCount((x) => x+1);
+        alert('clicked '+count);
+
+      }}>ADD</button>
     </>
-  );
-};
+  )
+}
 
 export default App;
